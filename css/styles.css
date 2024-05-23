@@ -38,6 +38,7 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+    font-weight: 500;
     
 }
 p {
@@ -119,7 +120,7 @@ a{
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--color-headings);
+    
 }
 .list--inline .list__item {
     display: inline-block;
@@ -128,6 +129,7 @@ a{
 .list--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 
 
 }
@@ -354,6 +356,7 @@ a{
 /*media*/
 .media {
     display: flex;
+    margin-bottom: 4rem;
 }
 .media__title {
     margin-top: 0;
@@ -515,7 +518,7 @@ a{
     margin-bottom: 4rem;
   }
   
-  .block__heading {
+   .block__heading {
     margin-top: 0;
   }
   
@@ -533,12 +536,12 @@ a{
   
   .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
   }
   
   .block--skewed-left {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   }
   
   .container {
@@ -613,9 +616,7 @@ a{
 .hero__image {
     width: 100%;
 }
-.hero {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
+
 @media screen and (min-width: 768px) {
     .hero {
         margin-top: 0;
@@ -676,6 +677,25 @@ a{
 @media screen and (min-width: 768px) {
     .feature:nth-of-type(even) .feature__content {
         order: 2;
+    }
+    
+}
+/*showcase block*/
+.block-showcase__image > img {
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image {
+        justify-self: end ;
+    }
+    .block-showcase__image > img {
+        width: auto;
+        max-width: 700px;
+
+
     }
     
 }
